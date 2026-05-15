@@ -10,6 +10,7 @@ from asyncio import sleep
 import re
 import bypass
 import os
+from dotenv import load_dotenv
 from base64 import b64encode,b64decode
 import time # yeah 
 import requests
@@ -28,11 +29,12 @@ import ssl, certifi
 import urllib.parse
 from obf_detect import detect_obf
 
+load_dotenv()
 is_localhost=False
 
 ssl_context = ssl.create_default_context(cafile=certifi.where())
 ownerid = 1123674631266639914
-ApiToken = "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"
+ApiToken = os.getenv("GITHUB_TOKEN")
 intents = discord.Intents.all()
 
 tag_access=[]
@@ -2480,4 +2482,4 @@ if __name__ == "__main__":
     client = MyClient(intents=intents)
 
 
-    client.run("MTM3MzgxODk1MTA0OTY3ODkyOA.Gf-d1D.wo6GwM2gW0CMfLLowxsDmZMDpV_B91L-G_JzRk")
+    client.run(os.getenv("DISCORD_TOKEN"))

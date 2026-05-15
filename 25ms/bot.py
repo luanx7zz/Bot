@@ -2482,4 +2482,4 @@ if __name__ == "__main__":
     client = MyClient(intents=intents)
 
 
-    client.run("MTM3MzgxODk1MTA0OTY3ODkyOA.Gf-d1D.wo6GwM2gW0CMfLLowxsDmZMDpV_B91L-G_JzRk")
+    client.run(os.getenv("DISCORD_TOKEN"))

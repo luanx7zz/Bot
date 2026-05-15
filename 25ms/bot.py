@@ -34,7 +34,7 @@ is_localhost=False
 
 ssl_context = ssl.create_default_context(cafile=certifi.where())
 ownerid = 1123674631266639914
-ApiToken = "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"
+ApiToken = os.getenv("GITHUB_TOKEN")
 intents = discord.Intents.all()
 
 tag_access=[]

@@ -29,6 +29,7 @@ import ssl, certifi
 import urllib.parse
 from obf_detect import detect_obf
 
+load_dotenv()
 is_localhost=False
 
 ssl_context = ssl.create_default_context(cafile=certifi.where())
